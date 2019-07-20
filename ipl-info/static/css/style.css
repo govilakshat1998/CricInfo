@@ -1,0 +1,273 @@
+html, body
+{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: "Lato";
+}
+
+body
+{
+    background-image: url(../assets/background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h2
+{
+    margin: 0;
+}
+
+.trans-layer
+{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.container
+{
+    height: 98%;
+    width: 98%;
+    margin: 1%;
+    box-sizing: border-box;
+    z-index: 2;
+    position: relative;
+}
+
+.nav
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    background: rgba(2, 126, 196, 0.9);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    position: relative;
+}
+
+.nav a
+{   
+    display: block;
+    font-weight: 500;
+    font-size: 1.1em;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    padding: 0.75em;
+}
+
+.nav a:hover
+{
+    background: rgb(31, 168, 218);
+    box-shadow: 0px 2px 2px -0.5px black;
+}
+
+.alert
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    width: 98%;
+    margin: 1%;
+    padding: 1%;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.fa-times
+{
+    cursor: pointer;
+    
+}
+.alert.failure
+{
+    background: rgba(232, 168, 160, 0.3);
+    color: rgb(163, 18, 0);
+    position: relative;
+    z-index: 2;
+}
+
+.alert.failure .fa-times
+{
+    color: rgb(163, 18, 0);
+}
+
+.alert.success
+{
+    background: rgba(137, 229, 159, 0.3);
+    color: rgb(0, 145, 34);
+    position: relative;
+    z-index: 2;
+}
+
+.alert.success .fa-times
+{
+    color: rgb(0, 145, 34);
+}
+
+.side-arrow
+{
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    border-radius: 8px 0 0 8px;
+}
+
+.side-arrow .fa
+{
+    cursor: pointer;    
+}
+
+.sidebar
+{
+    position: fixed;
+    z-index: 6;
+    right: 0;
+    height: 100%;
+    width: 275px;
+    background: rgb(6, 29, 66);
+    display: none;
+    color: white;
+    overflow-y: auto;
+}
+
+
+
+@media all and (max-width: 800px)
+{
+    .nav
+    {
+        justify-content: space-around;
+    }
+}
+
+.side-header
+{
+    height: 50px;
+    width: 100%;
+    font-weight: 900;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center; 
+    background: rgb(25, 57, 138);
+}
+
+.questions
+{
+    height: auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.question
+{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.question-header
+{
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.question input[type="radio"]
+{
+    cursor: pointer;
+}
+
+.option
+{
+    height: 40px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.option-value
+{
+    background: white;
+    color: black;
+    display: inline-block;
+    height: 30px;
+    width: 65%;
+    border-radius: 5px;
+    padding-top: 5px;
+    text-align: center;
+    padding-right: 2px;
+}
+
+.button 
+{
+    background: rgb(33, 104, 178) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30px;
+    width: 100px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar .button
+{
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.misc
+{
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+@media all and (max-width: 700px)
+{
+    .nav a
+    {   
+        font-size: 0.8em;
+        padding: 0.5em;
+    }
+}
+
+@media all and (max-width: 500px)
+{
+    .nav
+    {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,72 @@
+.form
+{
+    width: 20%;
+    height: 100px;
+}
+
+.results
+{
+    height: auto;
+    width: 100%;
+    margin-top: 0.5%;
+    margin-bottom: 1%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-radius: 10px;
+}
+
+.results .row:first-of-type
+{
+    font-weight: 700;
+    border-radius: 10px 10px 0 0;
+}
+
+.results .row:last-of-type
+{
+    border-radius: 0 0 10px 10px;
+}
+
+.results .row:nth-child(odd)
+{
+    background: rgba(33, 175, 76, 0.7);
+}
+
+.results .row:nth-child(even)
+{
+    background:  rgba(33, 175, 76, 0.3);
+}
+
+.row
+{
+    height: 35px;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.row.teams
+{
+    height: 50px;
+}
+
+.row span
+{
+    display: inline-block;
+    text-align: center;
+    flex: 1;
+}
+
+@media all and (max-width: 600px)
+{
+    .form
+    {
+        width: 98%;
+    }
+}
